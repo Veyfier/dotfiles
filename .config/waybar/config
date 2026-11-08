@@ -1,0 +1,67 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 10,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-bottom": 0,
+    "height": 34,
+    "spacing": 4,
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+     "modules-right": [
+     "custom/spotify", 
+     "tray",
+     "hyprland/language", 
+     "bluetooth", 
+     "pulseaudio", 
+     "network", 
+     "battery"
+    ],    
+    "hyprland/workspaces": {
+        "format": "{name}"
+    },
+    "clock": {
+        "format": "{:%H:%M} ",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "hyprland/language": {
+        "format": "<span> </span> {}",
+        "format-en": "EN",
+        "format-ru": "RU"
+    },
+    "custom/spotify": {
+        "format": " {}",
+        "max-length": 30,
+        "interval": 1,
+	"exec": "playerctl -p spotify metadata --format '{{artist}} - {{title}}'",
+        "exec-if": "pgrep spotify",
+        "on-click": "playerctl -p spotify play-pause",
+        "on-scroll-up": "playerctl -p spotify next",
+        "on-scroll-down": "playerctl -p spotify previous"
+    },
+    "hyprland/language": {
+        "format": "  {}",
+        "format-en": "EN",
+        "format-ru": "RU"
+    },
+    "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "format-disabled": "", 
+        "on-click": "blueman-manager"
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+},
+}
