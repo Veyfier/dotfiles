@@ -12,26 +12,23 @@ window#waybar {
     color: #ffffff;
 }
 
-/* Настраиваем плиточки рабочих столов (слева) */
 #workspaces button {
     padding: 0 10px;
     margin: 4px 3px;
-    background: rgba(255, 255, 255, 0.08); /* Подложка плиточки */
+    background: rgba(255, 255, 255, 0.08);
     color: #ffffff;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
 }
 
-/* Активный рабочий стол - яркий и с белой рамкой */
 #workspaces button.active,
 #workspaces button.focused {
-    background: rgba(255, 255, 255, 0.3); 
+    background: rgba(255, 255, 255, 0.3);
     border: 1px solid #ffffff;
     color: #ffffff;
 }
 
-/* Плиточки модулей (справа и центр) */
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray {
     padding: 0 10px;
     margin: 4px 2px;
@@ -50,5 +47,5 @@ window#waybar {
     background: rgba(255, 255, 255, 0.08);
     color: #ffffff;
     border-radius: 8px;
-    border: 1px solid rgba(137, 180, 250, 0.2); /* Еле заметная синеватая рамка */
+    border: 1px solid rgba(137, 180, 250, 0.2);
 }
